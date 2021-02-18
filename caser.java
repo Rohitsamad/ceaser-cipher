@@ -1,3 +1,4 @@
+import java.util.Scanner;
 class caser
 { 
      
@@ -17,8 +18,14 @@ class caser
     
     public static void main(String[] args) 
     { 
-        String str = ""; 
+        Scanner in = new Scanner(System.in);
+	System.out.print("Enter the message to be encrypted : ");
+	String str = ""; 
+	str = in.nextLine();
+	str = str.toUpperCase();
         int n = 3;   
-        System.out.println("encripted: " + word(str, n)); 
+	int m = n - 3;
+        System.out.println("encripted message: " + word(str, n));
+       	System.out.println("Decriptrd message: " + word(str, m));
     } 
 } 
